@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Application_1 = require("./Application");
+var MacFactory_1 = require("./MacFactory");
+var WindowsFactory_1 = require("./WindowsFactory");
+var winFactory = new Application_1.Application(new WindowsFactory_1.WindowsFactory());
+winFactory.initFactory();
+winFactory.createUI();
+console.log("---------");
+var macFactory = new Application_1.Application(new MacFactory_1.MacFactory());
+macFactory.initFactory();
+macFactory.createUI();
